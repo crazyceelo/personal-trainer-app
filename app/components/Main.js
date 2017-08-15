@@ -7,7 +7,7 @@ export default class Main extends React.Component {
         super()
 
         this.state={
-            // statesgoeshere: "string or number"
+            //code: "goeshere"
         }
     }
 
@@ -16,10 +16,12 @@ export default class Main extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1>Main Test</h1>
+                        <h1 className="text-center">Main Test</h1>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+module.exports = Main;
