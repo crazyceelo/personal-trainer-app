@@ -1,13 +1,11 @@
 var React = require("react");
-var router = require("react-router");
-import { HashRouter as Router, Route } from 'react-router-dom';
 
 export default class Main extends React.Component {
     constructor(){
         super()
 
         this.state={
-            //code: "goeshere"
+            //code: 
         }
     }
 
