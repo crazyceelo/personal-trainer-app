@@ -4,7 +4,22 @@ export default class Navbar extends Component {
     render(){
         return (
             <nav className="navbar navbar-light bg-faded">
-                <a className="navbar-brand" href="/">Home</a>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-1">
+                            <a className="navbar-brand" href="/">Home</a>
+                        </div>
+                        <div className="col-md-2 offset-md-4">
+                            <a className="nav-link text-center" href="#">Sign up</a>
+                        </div>
+                        <div className="col-md-2 offset-md-1">
+                            <a className="nav-link text-center" href="#">Member Login</a>
+                        </div>
+                        <div className="col-md-2">
+                            <a className="nav-link text-center" href="#">Trainer Login</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
         )
     }
