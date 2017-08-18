@@ -1,5 +1,7 @@
 var React = require("react");
 
+import Navbar from "../components/Navbar";
+
 export default class Main extends React.Component {
     constructor(){
         super()
