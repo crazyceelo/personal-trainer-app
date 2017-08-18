@@ -1,0 +1,43 @@
+{
+  "name": "personal-trainer-app",
+  "version": "1.0.0",
+  "description": "personal-trainer-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "personal-trainer-app",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazyceelo/personal-trainer-app.git"
+  },
+  "keywords": [
+    "trainer"
+  ],
+  "author": "Carlos Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazyceelo/personal-trainer-app/issues"
+  },
+  "homepage": "https://github.com/crazyceelo/personal-trainer-app#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.4"
+  }
+}
