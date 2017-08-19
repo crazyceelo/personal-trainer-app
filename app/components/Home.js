@@ -2,7 +2,7 @@ var React = require("react");
 
 import Navbar from "../components/Navbar";
 
-export default class Main extends React.Component {
+export default class Home extends React.Component {
     constructor(){
         super()
 
@@ -16,7 +16,7 @@ export default class Main extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="text-center">Main Test</h1>
+                        <h1 className="text-center">Home page</h1>
                     </div>
                 </div>
             </div>
@@ -24,4 +24,4 @@ export default class Main extends React.Component {
     }
 }
 
-module.exports = Main;
+module.exports = Home;
