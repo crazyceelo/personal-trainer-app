@@ -8,9 +8,6 @@ import Home from "../components/Home";
 import TrainerViewPage from "../components/TrainerViewPage";
 import TrainerEditPage from "../components/TrainerEditPage";
 import TrainerEditPage2 from "../components/TrainerEditPage2";
-import MemberView from "../components/MemberView";
-import PersonalTrainerEdit from "../components/PersonalTrainerEdit";
-import TrainerDashboard from "../components/TrainerDashboard";
 import Navbar from "../components/Navbar";
 
 
