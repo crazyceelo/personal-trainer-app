@@ -15,8 +15,9 @@ export default class Home extends React.Component {
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
-                        <h1 className="text-center">Home page</h1>
+                    <div className="col-md-2">
+                    <p>Email:</p><input  type="text"/>
+                        
                     </div>
                 </div>
             </div>
