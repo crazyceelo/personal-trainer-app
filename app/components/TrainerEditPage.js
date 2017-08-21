@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class TrainerEditPage extends Component {
+    handleSave(){
+        console.log("saved");
+    }
+
     render() {
         return (
             <div className="container">
@@ -69,7 +73,7 @@ export default class TrainerEditPage extends Component {
                     </div>
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <button type="submit" className="btn btn-primary">Save</button>
+                            <button onClick={this.handleSave} type="submit" className="btn btn-primary" id="saveButon">Save</button>
                         </div>
                     </div>
                 </form>
