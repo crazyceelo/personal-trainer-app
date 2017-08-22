@@ -9,13 +9,13 @@ export default class Navbar extends Component {
                         <div className="col-md-1">
                             <a className="navbar-brand" href="/">Home</a>
                         </div>
-                        <div className="col-md-2 offset-md-4">
+                        <div className="col-md-3 ">
                             <a className="nav-link text-center" href="#">Sign up</a>
                         </div>
-                        <div className="col-md-2 offset-md-1">
+                        <div className="col-md-4">
                             <a className="nav-link text-center" href="#">Member Login</a>
                         </div>
-                        <div className="col-md-2">
+                        <div className="col-md-4">
                             <a className="nav-link text-center" href="#">Trainer Login</a>
                         </div>
                     </div>

@@ -64,9 +64,73 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div className="row border">
-                    <div className="col-md-12">
-                        <span>asdfasdfs</span>
+                <div className="row border text-center">
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div className="row border text-center">
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div>
+                            <span>Trainer: </span> <span>Jon Doe</span>
+                        </div>
+                        <div>
+                            <span>Specialization: </span> <span>Yoga</span>
+                        </div>
                     </div>
                 </div>
             </div>
