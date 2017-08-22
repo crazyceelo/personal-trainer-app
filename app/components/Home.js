@@ -16,7 +16,49 @@ export default class Home extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1 className="text-center">Home page</h1>
+                        <br />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h1 className="display-1">Fitness Go</h1>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <p>
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                            asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
+                        </p>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <p>
+                            <strong>Search and book any personal trainer your area</strong>
+                        </p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-4">
+                        <form className="form-inline">
+                            <div className="form-group">
+                                <label htmlFor="zipCodeSearch">Zip Code: </label>
+                                <input type="text" id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
