@@ -51,7 +51,7 @@ export default class Home extends React.Component {
                         </p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row justify-content-center">
                     <div className="col-md-4">
                         <form className="form-inline">
                             <div className="form-group">
@@ -59,6 +59,14 @@ export default class Home extends React.Component {
                                 <input type="text" id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
                             </div>
                         </form>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <div className="row border">
+                    <div className="col-md-12">
+                        <span>asdfasdfs</span>
                     </div>
                 </div>
             </div>
