@@ -15,6 +15,7 @@ export default class Home extends React.Component {
         return(
             <div className="container">
                 <div className="row">
+<<<<<<< HEAD
                     <div className="col-md-12">
                         <br />
                     </div>
@@ -131,6 +132,11 @@ export default class Home extends React.Component {
                         <div>
                             <span>Specialization: </span> <span>Yoga</span>
                         </div>
+=======
+                    <div className="col-md-2">
+                    <p>Email:</p><input  type="text"/>
+                        
+>>>>>>> master
                     </div>
                 </div>
             </div>
