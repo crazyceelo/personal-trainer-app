@@ -23,7 +23,7 @@ export default class Navbar extends Component {
                     </ul>
                     </div>
                 </nav>
-                  <div className="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal fade" id="signUpModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                       <div className="modal-content">
                         <div className="modal-header">
@@ -37,10 +37,10 @@ export default class Navbar extends Component {
                             <div className="col-md-6">
                               <h4>Sign up as Member</h4>
                               <hr />
-                              <label for="exampleInputEmail1">Full Name</label>
+                              <label htmlFor="exampleInputEmail1">Full Name</label>
                               <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
                               <br />
-                              <label for="exampleInputPassword1">Password</label>
+                              <label htmlFor="exampleInputPassword1">Password</label>
                               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                               <br />
                               <br />
@@ -49,10 +49,10 @@ export default class Navbar extends Component {
                             <div className="col-md-6">
                               <h4>Sign up as Trainer</h4>
                               <hr />
-                              <label for="exampleInputEmail1">Full Name</label>
+                              <label htmlFor="exampleInputEmail1">Full Name</label>
                               <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
                               <br />
-                              <label for="exampleInputPassword1">Password</label>
+                              <label htmlFor="exampleInputPassword1">Password</label>
                               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                               <br />
                               <br />
@@ -65,7 +65,7 @@ export default class Navbar extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal fade" id="memberModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                       <div className="modal-content">
                         <div className="modal-header">
@@ -76,10 +76,10 @@ export default class Navbar extends Component {
                         </div>
                         <div className="modal-body">
                           <hr />
-                          <label for="exampleInputEmail1">Full Name</label>
+                          <label htmlFor="exampleInputEmail1">Full Name</label>
                           <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
                           <br />
-                          <label for="exampleInputPassword1">Password</label>
+                          <label htmlFor="exampleInputPassword1">Password</label>
                           <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                           <br />
                           <br />
@@ -90,7 +90,7 @@ export default class Navbar extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="modal fade" id="trainerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal fade" id="trainerModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                       <div className="modal-content">
                         <div className="modal-header">
@@ -101,10 +101,10 @@ export default class Navbar extends Component {
                         </div>
                         <div className="modal-body">
                           <hr />
-                          <label for="exampleInputEmail1">Full Name</label>
+                          <label htmlFor="exampleInputEmail1">Full Name</label>
                           <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
                           <br />
-                          <label for="exampleInputPassword1">Password</label>
+                          <label htmlFor="exampleInputPassword1">Password</label>
                           <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                           <br />
                           <br />

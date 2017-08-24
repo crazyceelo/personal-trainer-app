@@ -12,10 +12,9 @@ export default class Home extends React.Component {
     }
 
     render(){
-        return(
+        return (
             <div className="container">
                 <div className="row">
-<<<<<<< HEAD
                     <div className="col-md-12">
                         <br />
                     </div>
@@ -132,16 +131,12 @@ export default class Home extends React.Component {
                         <div>
                             <span>Specialization: </span> <span>Yoga</span>
                         </div>
-=======
                     <div className="col-md-2">
-                    <p>Email:</p><input  type="text"/>
-                        
->>>>>>> master
+                    <p>Email:</p><input  type="text" />
                     </div>
                 </div>
             </div>
+        </div>
         )
     }
 }
-
-module.exports = Home;
