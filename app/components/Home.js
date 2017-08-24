@@ -132,7 +132,6 @@ export default class Home extends React.Component {
                             <span>Specialization: </span> <span>Yoga</span>
                         </div>
                     <div className="col-md-2">
-                    <p>Email:</p><input  type="text" />
                     </div>
                 </div>
             </div>
