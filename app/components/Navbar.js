@@ -35,7 +35,7 @@ export default class Navbar extends Component {
                         <div className="modal-body">
                           <div className="row">
                             <div className="col-md-6">
-                              <h4>Sign in as Member</h4>
+                              <h4>Sign up as Member</h4>
                               <hr />
                               <label for="exampleInputEmail1">Full Name</label>
                               <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
@@ -47,7 +47,7 @@ export default class Navbar extends Component {
                               <button type="button" className="btn btn-primary">Save changes</button>
                             </div>
                             <div className="col-md-6">
-                              <h4>Sign in as Trainer</h4>
+                              <h4>Sign up as Trainer</h4>
                               <hr />
                               <label for="exampleInputEmail1">Full Name</label>
                               <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
@@ -56,7 +56,7 @@ export default class Navbar extends Component {
                               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                               <br />
                               <br />
-                              <button type="button" className="btn btn-primary">Continue to sign up</button>
+                              <button type="button" className="btn btn-primary" >Continue to sign up</button>
                             </div>
                           </div>
                         </div>
