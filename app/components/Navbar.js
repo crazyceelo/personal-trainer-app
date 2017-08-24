@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class Navbar extends Component {
+
+  handleMemberSave(){
+    console.log("handlMemberSave is clicked");
+  }
     render(){
         return (
             <div>
@@ -36,15 +40,17 @@ export default class Navbar extends Component {
                           <div className="row">
                             <div className="col-md-6">
                               <h4>Sign up as Member</h4>
-                              <hr />
-                              <label htmlFor="exampleInputEmail1">Full Name</label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
-                              <br />
-                              <label htmlFor="exampleInputPassword1">Password</label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-                              <br />
-                              <br />
-                              <button type="button" className="btn btn-primary">Save changes</button>
+                              <form>
+                                <hr />
+                                <label htmlFor="exampleInputEmail1">Full Name</label>
+                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
+                                <br />
+                                <label htmlFor="exampleInputPassword1">Password</label>
+                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                <br />
+                                <br />
+                                <button onClick={this.handleMemberSave} type="submit" className="btn btn-primary" >Save changes</button>
+                              </form>
                             </div>
                             <div className="col-md-6">
                               <h4>Sign up as Trainer</h4>
