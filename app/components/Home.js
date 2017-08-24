@@ -21,7 +21,7 @@ export default class Home extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h1 className="display-1">Fitness Go</h1>
+                        <h1 className="display-1">Spot Me</h1>
                     </div>
                 </div>
                 <br />
