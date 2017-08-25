@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var routes = require("./config/api-routes");
 
 // Server configuration
 var app = express();
@@ -27,6 +28,9 @@ db.once("open", function(){
     console.log("Mongoose connection successful.");
 })
 
+routes(app);
+
 app.listen(PORT, function(){
     console.log("App listening on PORT: " + PORT);
 })
+

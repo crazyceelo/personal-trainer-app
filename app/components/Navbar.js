@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import helper from "../components/utils/helpers";
 
 export default class Navbar extends Component {
   constructor() {
@@ -13,6 +14,9 @@ export default class Navbar extends Component {
 
   handleMemberSave(){
     console.log("handleMemberSave is saved");
+    helper.postMember();
+
+
   }
     render(){
         return (
@@ -64,8 +68,8 @@ export default class Navbar extends Component {
                             <div className="col-md-6">
                               <h4>Sign up as Trainer</h4>
                               <hr />
-                              <label htmlFor="exampleInputEmail1">Full Name</label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
+                              <label htmlFor="trainerName">Full Name</label>
+                              <input type="text" className="form-control" id="trainerName" placeholder="Jon Doe" />
                               <br />
                               <label htmlFor="exampleInputPassword1">Password</label>
                               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
@@ -94,8 +98,8 @@ export default class Navbar extends Component {
                           <label htmlFor="exampleInputEmail1">Full Name</label>
                           <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
                           <br />
-                          <label htmlFor="exampleInputPassword1">Password</label>
-                          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                          <label htmlFor="trainerPassword">Password</label>
+                          <input type="password" className="form-control" id="trainerPassword" placeholder="Password" />
                           <br />
                           <br />
                           <button type="button" className="btn btn-primary">Save changes</button>
