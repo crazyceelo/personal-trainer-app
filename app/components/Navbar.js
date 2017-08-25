@@ -51,11 +51,11 @@ export default class Navbar extends Component {
                               <h4>Sign up as Member</h4>
                               <form onSubmit={this.handleMemberSave}>
                                 <hr />
-                                <label htmlFor="exampleInputEmail1">Full Name</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
+                                <label htmlFor="memberName">Full Name</label>
+                                <input type="text" className="form-control" id="memberName" placeholder="Jon Doe" />
                                 <br />
-                                <label htmlFor="exampleInputPassword1">Password</label>
-                                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                <label htmlFor="memberPassword">Password</label>
+                                <input type="password" className="form-control" id="memberPassword" placeholder="Password" />
                                 <br />
                                 <br />
                                 <button onClick={this.handleMemberClick} type="submit" className="btn btn-primary" >Save changes</button>
