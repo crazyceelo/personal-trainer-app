@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 
 export default class Navbar extends Component {
+  constructor() {
+    super()
+
+    this.handleMemberSave = this.handleMemberSave.bind(this);
+  }
+
+  handleMemberClick(){
+    console.log("handleMemberClick is clicked");
+  }
 
   handleMemberSave(){
-    console.log("handlMemberSave is clicked");
+    console.log("handleMemberSave is saved");
   }
     render(){
         return (
@@ -40,7 +49,7 @@ export default class Navbar extends Component {
                           <div className="row">
                             <div className="col-md-6">
                               <h4>Sign up as Member</h4>
-                              <form>
+                              <form onSubmit={this.handleMemberSave}>
                                 <hr />
                                 <label htmlFor="exampleInputEmail1">Full Name</label>
                                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jon Doe" />
@@ -49,7 +58,7 @@ export default class Navbar extends Component {
                                 <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                                 <br />
                                 <br />
-                                <button onClick={this.handleMemberSave} type="submit" className="btn btn-primary" >Save changes</button>
+                                <button onClick={this.handleMemberClick} type="submit" className="btn btn-primary" >Save changes</button>
                               </form>
                             </div>
                             <div className="col-md-6">
