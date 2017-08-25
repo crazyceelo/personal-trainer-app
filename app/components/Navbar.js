@@ -4,8 +4,18 @@ import helper from "../components/utils/helpers";
 export default class Navbar extends Component {
   constructor() {
     super()
+    this.state = {
+      fullName: '',
+      password: ''
+    }
 
+    this.handleChange = this.handleChange.bind(this);
     this.handleMemberSave = this.handleMemberSave.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({fullName: event.target.fullName});
+    this.setState({password: event.target.password});
   }
 
   handleMemberClick(){
@@ -14,9 +24,7 @@ export default class Navbar extends Component {
 
   handleMemberSave(){
     console.log("handleMemberSave is saved");
-    helper.postMember();
-
-
+    helper.postMember(this.state.fullName, this.state.password);
   }
     render(){
         return (
@@ -56,10 +64,10 @@ export default class Navbar extends Component {
                               <form onSubmit={this.handleMemberSave}>
                                 <hr />
                                 <label htmlFor="memberName">Full Name</label>
-                                <input type="text" className="form-control" id="memberName" placeholder="Jon Doe" />
+                                <input type="text" value={this.state.fullName} onChange={this.handleChange} className="form-control" id="memberName" placeholder="Jon Doe" />
                                 <br />
                                 <label htmlFor="memberPassword">Password</label>
-                                <input type="password" className="form-control" id="memberPassword" placeholder="Password" />
+                                <input type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="memberPassword" placeholder="Password" />
                                 <br />
                                 <br />
                                 <button onClick={this.handleMemberClick} type="submit" className="btn btn-primary" >Save changes</button>

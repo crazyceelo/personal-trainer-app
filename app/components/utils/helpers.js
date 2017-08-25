@@ -2,7 +2,10 @@ import Axios from "axios";
 
 export default {
     
-    postMember: () => {
-        return Axios.post("/api");
+    postMember: (x, y) => {
+        return Axios.post("/api", {
+            fullName: x,
+            password: y
+        });
     }
 }
