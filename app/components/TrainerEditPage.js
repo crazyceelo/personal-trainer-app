@@ -5,7 +5,14 @@ export default class TrainerEditPage extends Component {
         super()
 
         this.state = {
-            // asdf: asdf
+            email: '',
+            specialization: '',
+            address1: '',
+            address2: '',
+            city: '',
+            state: '',
+            zip: '',
+            description: ''
         }
     }
 
