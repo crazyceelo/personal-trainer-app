@@ -45,7 +45,10 @@ export default class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                        <a className="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign up <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#" data-toggle="modal" data-target="#signUpMemberModal">Sign up as member <span className="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item active">
+                        <a className="nav-link" href="/#/trainer-edit-page">Sign up as trainer <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" href="#" data-toggle="modal" data-target="#memberModal">Member Login</a>
@@ -56,23 +59,21 @@ export default class Navbar extends Component {
                     </ul>
                     </div>
                 </nav>
-                  <div className="modal fade" id="signUpModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal fade" id="signUpMemberModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                       <div className="modal-content">
                         <div className="modal-header">
-                          <h5 className="modal-title" id="exampleModalLabel">Sign up</h5>
+                          <h4 className="modal-title" id="exampleModalLabel">Sign up as Member</h4>
                           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div className="modal-body">
                           <div className="row">
-                            <div className="col-md-6">
-                              <h4>Sign up as Member</h4>
+                            <div className="col-md-12">
                               <form onSubmit={this.handleMemberSubmit}>
-                                <hr />
-                                <label htmlFor="email">Full Name</label>
-                                <input type="email" name="email"  value={this.state.email} onChange={this.handleChange} className="form-control" id="email" placeholder="Jon Doe" />
+                                <label htmlFor="email">email</label>
+                                <input type="email" name="email"  value={this.state.email} onChange={this.handleChange} className="form-control" id="email" placeholder="abc@abc.com" />
                                 <br />
                                 <label htmlFor="memberPassword">Password</label>
                                 <input type="password" name="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="memberPassword" placeholder="Password" />
@@ -81,17 +82,35 @@ export default class Navbar extends Component {
                                 <button onClick={this.handleMemberClick} type="submit" value="Submit" className="btn btn-primary" >Confirm</button>
                               </form>
                             </div>
-                            <div className="col-md-6">
-                              <h4>Sign up as Trainer</h4>
-                              <hr />
-                              <label htmlFor="trainerName">Full Name</label>
-                              <input type="text" className="form-control" id="trainerName" placeholder="Jon Doe" />
-                              <br />
-                              <label htmlFor="exampleInputPassword1">Password</label>
-                              <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-                              <br />
-                              <br />
-                              <button type="button" className="btn btn-primary" >Continue to sign up</button>
+                          </div>
+                        </div>
+                        <div className="modal-footer">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="modal fade" id="signUpTrainerModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog" role="document">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h4 className="modal-title" id="exampleModalLabel">Sign up as Trainer</h4>
+                          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div className="modal-body">
+                          <div className="row">
+                            <div className="col-md-12">
+                              <form>
+                                <label htmlFor="email">email</label>
+                                <input type="email" name="email" value={this.state.email} className="form-control" id="email2" placeholder="abc@abc.com" />
+                                <br />
+                                <label htmlFor="exampleInputPassword1">Password</label>
+                                <input type="password" name="password" value={this.state.password} className="form-control" id="password2" placeholder="Password" />
+                                <br />
+                                <br />
+                                <button type="button" className="btn btn-primary" >Continue to sign up</button>
+                              </form>
                             </div>
                           </div>
                         </div>
