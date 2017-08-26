@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import helper from "../components/utils/helpers";
 
 export default class TrainerEditPage extends Component {
     constructor(props) {
-        super()
+        super(props)
 
         this.state = {
             email: '',
@@ -14,8 +15,43 @@ export default class TrainerEditPage extends Component {
             zip: '',
             description: ''
         }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleTrainerSubmit = this.handleTrainerSubmit.bind(this);
     }
 
+    handleChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleTrainerSubmit(event){
+        event.preventDefault();
+        console.log("handleTrainerSubmit is submitted");
+        console.log("email: " + this.state.email);
+        console.log("specialization: " + this.state.specialization);
+        console.log("address1: " + this.state.address1);
+        console.log("address2: " + this.state.address2);
+        console.log("city: " + this.state.city);
+        console.log("state: " + this.state.state);
+        console.log("zip: " + this.state.zip);
+        console.log("description: " + this.state.description);
+        helper.postTrainer(
+            this.state.email,
+            this.state.specialization,
+            this.state.address1,
+            this.state.address2,
+            this.state.city,
+            this.state.state,
+            this.state.zip,
+            this.state.description 
+        )
+    }
 
     handleSave(){
         console.log("saved");
@@ -29,13 +65,13 @@ export default class TrainerEditPage extends Component {
                         <br />
                     </div>
                 </div>
-                <form>
+                <form onSubmit={this.handleTrainerSubmit}>
                     <div className="row">
                         <div className="col-md-3">
                             <div className="form-group row">
-                                <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
+                                <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
                                 <div className="col-sm-12">
-                                    <input type="text" className="form-control" id="staticEmail" placeholder="email@example.com" />
+                                    <input type="email" name="email" value={this.state.email} onChange={this.handleChange} className="form-control" id="email2" placeholder="email@example.com" />
                                 </div>
                             </div>
                             <div className="form-group row">
@@ -89,7 +125,7 @@ export default class TrainerEditPage extends Component {
                     </div>
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <button onClick={this.handleSave} type="submit" className="btn btn-primary" id="saveButon">Save</button>
+                            <button onClick={this.handleSave} type="submit" value="Submit" className="btn btn-primary" id="saveButon">Submit</button>
                         </div>
                     </div>
                 </form>
