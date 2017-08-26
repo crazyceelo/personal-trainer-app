@@ -34,6 +34,11 @@ export default class Navbar extends Component {
     console.log("password is " + this.state.password);
     helper.postMember(this.state.email, this.state.password);
   }
+
+  renderTrainers(){
+    
+  }
+
     render(){
         return (
             <div>

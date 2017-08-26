@@ -29,6 +29,10 @@ function routes(app) {
             }
         })
     })
+
+    app.get("/api-trainer", (req, res) =>{
+        res.send();
+    })
 }
 
 module.exports = routes;
