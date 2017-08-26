@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 
 export default class TrainerEditPage extends Component {
+    constructor(props) {
+        super()
+
+        this.state = {
+            // asdf: asdf
+        }
+    }
+
+
     handleSave(){
         console.log("saved");
     }
