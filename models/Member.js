@@ -3,7 +3,7 @@ var mongoose = require ("mongoose");
 var Schema = mongoose.Schema;
 
 var MemberSchema = new Schema({
-    fullName: {
+    email: {
         type: String
     },
 
