@@ -49,7 +49,7 @@ export default class TrainerEditPage extends Component {
             this.state.city,
             this.state.state,
             this.state.zip,
-            this.state.description 
+            this.state.description
         )
     }
 
@@ -75,37 +75,37 @@ export default class TrainerEditPage extends Component {
                                 </div>
                             </div>
                             <div className="form-group row">
-                                <label htmlFor="inputPassword" className="col-md-12 col-form-label">Specialization</label>
+                                <label htmlFor="specialization" className="col-md-12 col-form-label">Specialization</label>
                                 <div className="col-md-12">
-                                    <input type="text" className="form-control" id="specialization" placeholder="e.g. yoga" />
+                                    <input type="text" name="specialization" value={this.state.specialization} onChange={this.handleChange} className="form-control" id="specialization" placeholder="e.g. yoga" />
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-9">
                             <div className="form-group row">
-                                <label htmlFor="inputAddress" className="col-md-12 col-form-label">Address</label>
+                                <label htmlFor="address1" className="col-md-12 col-form-label">Address</label>
                                 <div className="col-md-12">
-                                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                                    <input type="text" name="address1" value={this.state.address1} onChange={this.handleChange} className="form-control" id="address1" placeholder="1234 Main St" />
                                 </div>
                             </div>
                             <div className="form-group row">
-                                <label htmlFor="inputAddress2" className="col-md-12 col-form-label">Address</label>
+                                <label htmlFor="address2" className="col-md-12 col-form-label">Address</label>
                                 <div className="col-md-12">
-                                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                                    <input type="text" name="address2" value={this.state.address2} onChange={this.handleChange} className="form-control" id="address2" placeholder="Apartment, studio, or floor" />
                                 </div>
                             </div>
                             <div className="form-row row">
                                 <div className="form-group col-md-4">
-                                    <label htmlFor="inputCity" className="col-form-label">City</label>
-                                    <input type="text" className="form-control" id="inputCity" />
+                                    <label htmlFor="city" className="col-form-label">City</label>
+                                    <input type="text" name="city" value={this.state.city} onChange={this.handleChange} className="form-control" id="city" />
                                 </div>
                                 <div className="form-group col-md-4">
-                                    <label htmlFor="inputState" className="col-form-label">State</label>
-                                    <input type="text" className="form-control" id="inputState" />
+                                    <label htmlFor="state" className="col-form-label">State</label>
+                                    <input type="text" name="state" value={this.state.state} onChange={this.handleChange} className="form-control" id="state" />
                                 </div>
                                 <div className="form-group col-md-2">
-                                    <label htmlFor="inputZip" className="col-form-label">Zip</label>
-                                    <input type="text" className="form-control" id="inputZip" />
+                                    <label htmlFor="zip" className="col-form-label">Zip</label>
+                                    <input type="text" name="zip" value={this.state.zip} onChange={this.handleChange} className="form-control" id="zip" />
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ export default class TrainerEditPage extends Component {
                                 <div className="form-group">
                                     <label htmlFor="description" className="col-form-label">Description</label>
                                     <div>
-                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" 
+                                        <textarea className="form-control" id="description" rows="8" name="description" value={this.state.description} onChange={this.handleChange}
                                         placeholder="I am a Certified Personal Trainer through the American College of Sports Medicine (ACSM), a Certified Group Fitness Instructor through the American Council on Exercise (ACE), and serve as a Wellness Ambassador for the AU Recreational Sports and Fitness department. I specializes in positive body image, holistic wellness, and strength and endurance programming. In high school, I played lacrosse, and ran for the cross-country team. Along with teaching group exercise classes at AU, I run half-marathons and triathlons."></textarea>
                                     </div>
                                 </div>
