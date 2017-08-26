@@ -10,20 +10,22 @@ export default class Navbar extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleMemberSave = this.handleMemberSave.bind(this);
+    this.handleMemberSubmit = this.handleMemberSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({fullName: event.target.fullName});
-    this.setState({password: event.target.password});
+    this.setState({fullName: event.target.memberName});
+    this.setState({password: event.target.memberPassword});
   }
 
   handleMemberClick(){
-    console.log("handleMemberClick is clicked");
+    // console.log("handleMemberClick is clicked");
   }
 
-  handleMemberSave(){
-    console.log("handleMemberSave is saved");
+  handleMemberSubmit(){
+    console.log("handleMemberSubmit is submitted");
+    console.log("fullName is " + this.state.fullName);
+    console.log("password is " + this.state.password);
     helper.postMember(this.state.fullName, this.state.password);
   }
     render(){
@@ -61,7 +63,7 @@ export default class Navbar extends Component {
                           <div className="row">
                             <div className="col-md-6">
                               <h4>Sign up as Member</h4>
-                              <form onSubmit={this.handleMemberSave}>
+                              <form onSubmit={this.handleMemberSubmit}>
                                 <hr />
                                 <label htmlFor="memberName">Full Name</label>
                                 <input type="text" value={this.state.fullName} onChange={this.handleChange} className="form-control" id="memberName" placeholder="Jon Doe" />
@@ -70,7 +72,7 @@ export default class Navbar extends Component {
                                 <input type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="memberPassword" placeholder="Password" />
                                 <br />
                                 <br />
-                                <button onClick={this.handleMemberClick} type="submit" className="btn btn-primary" >Save changes</button>
+                                <button onClick={this.handleMemberClick} type="submit" value="Submit" className="btn btn-primary" >Save changes</button>
                               </form>
                             </div>
                             <div className="col-md-6">
