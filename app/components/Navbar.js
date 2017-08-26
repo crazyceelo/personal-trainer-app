@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import helper from "../components/utils/helpers";
 
 export default class Navbar extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      fullName: '',
+      email: '',
       password: ''
     }
 
@@ -14,19 +14,25 @@ export default class Navbar extends Component {
   }
 
   handleChange(event) {
-    this.setState({fullName: event.target.memberName});
-    this.setState({password: event.target.memberPassword});
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
   }
 
   handleMemberClick(){
     // console.log("handleMemberClick is clicked");
   }
 
-  handleMemberSubmit(){
+  handleMemberSubmit(event){
+    event.preventDefault();
     console.log("handleMemberSubmit is submitted");
-    console.log("fullName is " + this.state.fullName);
+    console.log("email is " + this.state.email);
     console.log("password is " + this.state.password);
-    helper.postMember(this.state.fullName, this.state.password);
+    helper.postMember(this.state.email, this.state.password);
   }
     render(){
         return (
@@ -65,14 +71,14 @@ export default class Navbar extends Component {
                               <h4>Sign up as Member</h4>
                               <form onSubmit={this.handleMemberSubmit}>
                                 <hr />
-                                <label htmlFor="memberName">Full Name</label>
-                                <input type="text" value={this.state.fullName} onChange={this.handleChange} className="form-control" id="memberName" placeholder="Jon Doe" />
+                                <label htmlFor="email">Full Name</label>
+                                <input type="email" name="email"  value={this.state.email} onChange={this.handleChange} className="form-control" id="email" placeholder="Jon Doe" />
                                 <br />
                                 <label htmlFor="memberPassword">Password</label>
-                                <input type="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="memberPassword" placeholder="Password" />
+                                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} className="form-control" id="memberPassword" placeholder="Password" />
                                 <br />
                                 <br />
-                                <button onClick={this.handleMemberClick} type="submit" value="Submit" className="btn btn-primary" >Save changes</button>
+                                <button onClick={this.handleMemberClick} type="submit" value="Submit" className="btn btn-primary" >Confirm</button>
                               </form>
                             </div>
                             <div className="col-md-6">
