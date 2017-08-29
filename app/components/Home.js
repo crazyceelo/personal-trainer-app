@@ -1,14 +1,35 @@
 var React = require("react");
-
+import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 
 export default class Home extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state={
-            //code: 
+            zip: '' 
         }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidUpdate(){
+        console.log(this.state);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+      
+
+    renderLocalTrainers(){
+        helper.getLocalTrainers(this.state.zip);
     }
 
     render(){
@@ -56,7 +77,8 @@ export default class Home extends React.Component {
                         <form className="form-inline">
                             <div className="form-group">
                                 <label htmlFor="zipCodeSearch">Zip Code: </label>
-                                <input type="text" id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
+                                <input type="text" name="zip" min="1" max="5" onChange={this.handleChange} id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
+                                <button type="submit" value="Submit" className="btn btn-primary" id="zipButton">Search</button>
                             </div>
                         </form>
                     </div>
