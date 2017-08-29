@@ -7,10 +7,12 @@ export default class Home extends React.Component {
         super(props)
 
         this.state={
-            zip: '' 
+            zip: '',
+            results: [] 
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleZipSubmit = this.handleZipSubmit.bind(this);
     }
 
     componentDidUpdate(){
@@ -28,8 +30,18 @@ export default class Home extends React.Component {
     }
       
 
-    renderLocalTrainers(){
-        helper.getLocalTrainers(this.state.zip);
+    handleZipSubmit(event){
+        event.preventDefault();
+        if (this.state.zip){
+            helper.getLocalTrainers(this.state.zip).then((data) => {
+                this.setState({
+                    results: data
+                })
+            })
+        }
+        else{
+            console.log("no trainers in this area");
+        }
     }
 
     render(){
@@ -74,7 +86,7 @@ export default class Home extends React.Component {
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-md-4">
-                        <form className="form-inline">
+                        <form onSubmit={this.handleZipSubmit} className="form-inline">
                             <div className="form-group">
                                 <label htmlFor="zipCodeSearch">Zip Code: </label>
                                 <input type="text" name="zip" min="1" max="5" onChange={this.handleChange} id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />

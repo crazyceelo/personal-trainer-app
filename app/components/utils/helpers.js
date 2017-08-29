@@ -27,10 +27,13 @@ export default {
     },
 
     getLocalTrainers: (zip) => {
-        if (zip){
-            console.log("zip-test");
-        }
-
-        return Axios.get("/api-trainer?ID="+ id)
+        return Axios.get("/api-trainer/"+ zip)
+        .then(function(response){
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(function(error){
+            console.log(error);
+        })
     }
 };
