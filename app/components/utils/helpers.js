@@ -24,5 +24,16 @@ export default {
         }).then(function(response){
             console.log(response.data);
         })
+    },
+
+    getLocalTrainers: (zip) => {
+        return Axios.get("/api-trainer/"+ zip)
+        .then(function(response){
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(function(error){
+            console.log(error);
+        })
     }
 };

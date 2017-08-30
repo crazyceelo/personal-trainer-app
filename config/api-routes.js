@@ -30,8 +30,15 @@ function routes(app) {
         })
     })
 
-    app.get("/api-trainer", (req, res) =>{
-        res.send();
+    app.get("/api-trainer/:zip", (req, res) =>{
+        var zipcode = req.params.zip;
+        console.log(zipcode);
+        Trainer.find({
+            zip: zipcode
+        }).then((response) => {
+            console.log(response);
+            res.json(response);
+        })
     })
 }
 
