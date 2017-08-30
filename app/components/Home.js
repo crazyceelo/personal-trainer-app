@@ -1,6 +1,8 @@
 var React = require("react");
 import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
+//import '../style.css';
+
 
 export default class Home extends React.Component {
     constructor(props){
@@ -46,7 +48,7 @@ export default class Home extends React.Component {
 
     render(){
         return (
-            <div className="container">
+            <div className="container app">
                 <div className="row">
                     <div className="col-md-12">
                         <br />

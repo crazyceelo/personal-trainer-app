@@ -1,6 +1,5 @@
 var React = require("react");
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { render } from 'react-dom';
 
 
 // require Main.js
