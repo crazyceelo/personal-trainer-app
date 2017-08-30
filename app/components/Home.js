@@ -99,7 +99,19 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <div className="row border text-center">
-                    <div className="col-md-3">
+                    {this.state.results.map(function(data){
+                        return(
+                            <div className="col-md-3">
+                                <div>
+                                    <span>Trainer: </span><span>{data.email} </span>
+                                </div>
+                                <div>
+                                    <span>Specialization: </span><span>{data.specialization} </span>
+                                </div>
+                            </div>
+                        )
+                    })}
+                    {/* <div className="col-md-3">
                         <div>
                             <span>Trainer: </span> <span>Jon Doe</span>
                         </div>
@@ -130,10 +142,10 @@ export default class Home extends React.Component {
                         <div>
                             <span>Specialization: </span> <span>Yoga</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <br />
-                <div className="row border text-center">
+                {/* <div className="row border text-center">
                     <div className="col-md-3">
                         <div>
                             <span>Trainer: </span> <span>Jon Doe</span>
@@ -165,11 +177,9 @@ export default class Home extends React.Component {
                         <div>
                             <span>Specialization: </span> <span>Yoga</span>
                         </div>
-                    <div className="col-md-2">
                     </div>
-                </div>
+                </div> */}
             </div>
-        </div>
         )
     }
 }
