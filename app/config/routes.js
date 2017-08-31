@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 
 // require Main.js
 import Home from "../components/Home";
-import TrainerViewPage from "../components/Child1/TrainerViewPage";
+import TrainerViewPage from "../components/TrainerViewPage";
 import TrainerEditPage from "../components/TrainerEditPage";
 import Navbar from "../components/Navbar";
 

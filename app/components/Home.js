@@ -1,7 +1,7 @@
 var React = require("react");
 import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
-import TrainerViewPage from "./Child1/TrainerViewPage";
+import Trainer from "./child1/Trainer";
 
 
 export default class Home extends React.Component {
@@ -103,16 +103,7 @@ export default class Home extends React.Component {
                 <div className="row border text-center">
                     {this.state.results.map(function(trainer){
                         return(
-                            <a href="/#/trainer-view-page" key={trainer._id}>
-                                <div className="col-md-3" >
-                                    <div>
-                                        <span >Trainer: </span><span>{trainer.email} </span>
-                                    </div>
-                                    <div>
-                                        <span>Specialization: </span><span>{trainer.specialization} </span>
-                                    </div>
-                                </div>
-                            </a>
+                            <Trainer key={trainer._id} trainer={trainer}/>
                         )
                     })}
                     {/* <div className="col-md-3">
