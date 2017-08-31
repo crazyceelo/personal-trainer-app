@@ -2,7 +2,7 @@ var React = require("react");
 import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 import Trainer from "./child1/Trainer";
-
+import TrainerViewPage from "./child1/TrainerViewPage";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -106,74 +106,15 @@ export default class Home extends React.Component {
                             <Trainer key={trainer._id} trainer={trainer}/>
                         )
                     })}
-                    {/* <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div> */}
+                </div>
+                <div className="row border text-center">
+                    {this.state.results.map(function(trainer){
+                        return(
+                            <TrainerViewPage key={trainer._id} trainer={trainer}/>
+                        )
+                    })}
                 </div>
                 <br />
-                {/* <div className="row border text-center">
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div>
-                            <span>Trainer: </span> <span>Jon Doe</span>
-                        </div>
-                        <div>
-                            <span>Specialization: </span> <span>Yoga</span>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         )
     }

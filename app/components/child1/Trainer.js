@@ -1,10 +1,25 @@
 var React = require("react");
 
 export default class Trainer extends React.Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            email: ''
+        }
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        console.log(this.props.trainer.email);
+        console.log(this.props.trainer.specialization);
+        console.log(this.props.trainer.description);
+    }
 
     render(){
         return (
-            <a href="/#/trainer-view-page" >
+            <a onClick={this.handleClick}>
                 <div className="col-md-3" >
                     <div>
                         <span >Trainer: </span><span>{this.props.trainer.email} </span>
@@ -17,19 +32,3 @@ export default class Trainer extends React.Component {
         )
     }
 }
-
-
-
-
-
-{/* <a href="/#/trainer-view-page" key={trainer._id}>
-    <div className="col-md-3" >
-        <div>
-            <span >Trainer: </span><span>{trainer.email} </span>
-        </div>
-        <div>
-            <span>Specialization: </span><span>{trainer.specialization} </span>
-        </div>
-    </div>
-
-</a> */}
