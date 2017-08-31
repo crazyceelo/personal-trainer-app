@@ -101,14 +101,14 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <div className="row border text-center">
-                    {this.state.results.map(function(data){
+                    {this.state.results.map(function(trainer){
                         return(
                             <div className="col-md-3">
                                 <div>
-                                    <span>Trainer: </span><span>{data.email} </span>
+                                    <a href="/#/trainer-view-page"><span>Trainer: </span><span>{trainer.email} </span></a>
                                 </div>
                                 <div>
-                                    <span>Specialization: </span><span>{data.specialization} </span>
+                                    <span>Specialization: </span><span>{trainer.specialization} </span>
                                 </div>
                             </div>
                         )
