@@ -14,7 +14,7 @@ module.exports = (
         <div>
             <Navbar />
                 <Switch>
-                    <Route exact path="/" component={Home}/>
+                    <Route path="/" component={Home}/>
                     <Route path="/trainer-edit-page"  component={TrainerEditPage}/>
                 </Switch>
         </div>

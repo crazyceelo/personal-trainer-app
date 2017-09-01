@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 import Trainer from "./child1/Trainer";
-import trainerViewPage from "./child1/child2/TrainerViewPage";
+import TrainerViewPage from "./child1/child2/TrainerViewPage";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -11,11 +11,13 @@ export default class Home extends React.Component {
 
         this.state={
             zip: '',
-            results: [] 
+            results: [],
+            selected: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleZipSubmit = this.handleZipSubmit.bind(this);
+        this.updateSelected = this.updateSelected.bind(this);
     }
 
     componentDidUpdate(){
@@ -39,7 +41,8 @@ export default class Home extends React.Component {
             helper.getLocalTrainers(this.state.zip).then((data) => {
                 this.setState({
                     results: data
-                })
+                });
+                location.href="#/trainers"
             })
         }
         else{
@@ -47,6 +50,12 @@ export default class Home extends React.Component {
         }
     }
 
+    updateSelected(trainer){
+        this.setState({
+            selected: trainer
+        });
+    }
+    
     render(){
         return (
             <div className="container">
@@ -101,22 +110,10 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div className="row border text-center">
-                    {this.state.results.map(function(trainer){
-                        return(
-                            <Trainer key={trainer._id} trainer={trainer}/>
-                        )
-                    })}
-                </div>
-                    <Route path="/#/trainer-view-page" component={trainerViewPage}/>
 
-                {/* <div className="row border text-center">
-                    {this.state.results.map(function(trainer){
-                        return(
-                            <TrainerViewPage key={trainer._id} trainer={trainer}/>
-                        )
-                    })}
-                </div> */}
+                <Route path="/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
+
+                <Route path="/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
                 <br />
             </div>
         )
