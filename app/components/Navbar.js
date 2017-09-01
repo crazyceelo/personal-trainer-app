@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import helper from "../components/utils/helpers";
+import TrainerEditPage from "../components/TrainerEditPage";
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -43,7 +45,7 @@ export default class Navbar extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="/" >Home</a>
+                    <a className="navbar-brand" href="#/home" >Home</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>

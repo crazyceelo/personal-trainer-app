@@ -24,7 +24,7 @@ export default class Trainer extends React.Component {
                 {this.props.trainers.map((trainer)=>{
                     return(
                         <div className="row border text-center" key={trainer._id}>
-                            <a  href="/#/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
+                            <a  href="/#/home/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
                                 <div className="col-md-3" >
                                     <div>
                                         <span >Trainer: </span><span>{trainer.email} </span>

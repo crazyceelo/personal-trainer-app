@@ -4,6 +4,7 @@ import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 import Trainer from "./child1/Trainer";
 import TrainerViewPage from "./child1/child2/TrainerViewPage";
+import TrainerEditPage from "../components/TrainerEditPage";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -42,7 +43,7 @@ export default class Home extends React.Component {
                 this.setState({
                     results: data
                 });
-                location.href="#/trainers"
+                location.href="#/home/trainers"
             })
         }
         else{
@@ -111,9 +112,9 @@ export default class Home extends React.Component {
                 <br />
                 <br />
 
-                <Route path="/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
+                <Route path="/home/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
 
-                <Route path="/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
+                <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
                 <br />
             </div>
         )
