@@ -48,7 +48,7 @@ export default class Home extends React.Component {
 
     render(){
         return (
-            <div className="container app">
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <br />
