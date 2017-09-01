@@ -1,5 +1,4 @@
 var React = require("react");
-import TrainerViewPage from "./child2/TrainerViewPage";
 
 export default class Trainer extends React.Component {
     constructor(props){
@@ -20,16 +19,25 @@ export default class Trainer extends React.Component {
 
     render(){
         return (
-            <a href="/#/" onClick={this.handleClick}>
-                <div className="col-md-3" >
-                    <div>
-                        <span >Trainer: </span><span>{this.props.trainer.email} </span>
-                    </div>
-                    <div>
-                        <span>Specialization: </span><span>{this.props.trainer.specialization} </span>
-                    </div>
-                </div>
-            </a>
+
+            <div>
+                {this.props.trainers.map((trainer)=>{
+                    return(
+                        <div className="row border text-center" key={trainer._id}>
+                            <a  href="/#/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
+                                <div className="col-md-3" >
+                                    <div>
+                                        <span >Trainer: </span><span>{trainer.email} </span>
+                                    </div>
+                                    <div>
+                                        <span>Specialization: </span><span>{trainer.specialization} </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    )
+                })}
+            </div>
         )
     }
 }

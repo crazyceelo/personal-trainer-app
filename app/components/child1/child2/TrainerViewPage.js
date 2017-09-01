@@ -6,6 +6,9 @@ export default class TrainerViewPage extends Component {
 
     }
     
+    componentDidMount(){
+        console.log(this.props.trainer);
+    }
 
     render() {
         return (
@@ -23,7 +26,7 @@ export default class TrainerViewPage extends Component {
                     <dd className="col-sm-9">{this.props.trainer.specialization}</dd>
               
                     <dt className="col-sm-2">Email: </dt>
-                    <dd className="col-sm-9">{this.props.trainer.email}</dd>
+                    <dd className="col-sm-9">asdfasdf</dd>
                 </dl>
                 <dl className="row">
                     <div>
@@ -33,7 +36,7 @@ export default class TrainerViewPage extends Component {
                 <dl className="row">
                     <div>
                         <dd className="col-sm-12"> 
-                        {this.props.trainer.description}
+                        asdfasdf
                         </dd>
                     </div>
                 </dl>
