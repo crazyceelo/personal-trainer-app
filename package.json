@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "personal-trainer-app",
+    "watch": "webpack --watch",
+    "build": "webpack",
     "start": "node server.js"
   },
   "repository": {
