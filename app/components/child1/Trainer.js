@@ -1,4 +1,5 @@
 var React = require("react");
+import TrainerViewPage from "./child2/TrainerViewPage";
 
 export default class Trainer extends React.Component {
     constructor(props){
@@ -19,7 +20,7 @@ export default class Trainer extends React.Component {
 
     render(){
         return (
-            <a onClick={this.handleClick}>
+            <a href="/#/" onClick={this.handleClick}>
                 <div className="col-md-3" >
                     <div>
                         <span >Trainer: </span><span>{this.props.trainer.email} </span>

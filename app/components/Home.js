@@ -1,8 +1,9 @@
 var React = require("react");
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 import Trainer from "./child1/Trainer";
-import TrainerViewPage from "./child1/TrainerViewPage";
+import trainerViewPage from "./child1/child2/TrainerViewPage";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -107,13 +108,15 @@ export default class Home extends React.Component {
                         )
                     })}
                 </div>
-                <div className="row border text-center">
+                    <Route path="/#/trainer-view-page" component={trainerViewPage}/>
+
+                {/* <div className="row border text-center">
                     {this.state.results.map(function(trainer){
                         return(
                             <TrainerViewPage key={trainer._id} trainer={trainer}/>
                         )
                     })}
-                </div>
+                </div> */}
                 <br />
             </div>
         )
