@@ -63,6 +63,11 @@ export default class TrainerEditPage extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </div>
                 </div>
                 <form onSubmit={this.handleTrainerSubmit}>

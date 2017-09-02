@@ -49,6 +49,9 @@ body, html {
       height: 340px;
   }
 
+  .col-form-label {
+    color: #fff;
+  }
   
 trainerInfo {
     color: #428BCA;
