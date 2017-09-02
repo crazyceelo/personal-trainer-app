@@ -3,28 +3,35 @@ body, html {
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
-}
-
-.navbar {
-    background-color: rgba(200,200,200,0.5);  
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-image: url("./background.jpg");
+    min-height: 100%;
     position: relative;
-    opacity: 0.65;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-.bgimg-1 {
-background-image: url("./background.jpg");
-min-height: 100%;
-}
+  .navbar {
+    opacity: 0.45;
+    background-color: rgba(200,200,200,0.5);
+  }
 
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
+  .display-1{
+    color: #fff;
+    padding: 18px;
+    font-size: 75px;
+    letter-spacing: 30px;
+  }
+
+  .pitch{
+    color: #fff;
+  }
+
+  .instructions{
+    color: #fff;
+  }
+
+  .zipLabel{
+    color: #fff;
+  }

@@ -59,18 +59,29 @@ export default class Home extends React.Component {
     
     render(){
         return (
-            <div className="container">
+            <div className="container test">
                 <div className="row">
                     <div className="col-md-12">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <br />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <div className="bgimg-1">
-                            <div className="caption">
-                                <span className="border">Spot Me</span>
-                            <div/>
+                        <div className="caption">
+                            <span className="display-1">Spot Me</span>
                         </div>
                     </div>
                 </div>
@@ -78,7 +89,7 @@ export default class Home extends React.Component {
                 <br />
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <p>
+                        <p className="pitch">
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
@@ -95,7 +106,7 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <div className="row">
-                    <div className="col-md-12 text-center">
+                    <div className="col-md-12 text-center instructions">
                         <p>
                             <strong>Search and book any personal trainer your area</strong>
                         </p>
@@ -105,7 +116,7 @@ export default class Home extends React.Component {
                     <div className="col-md-4">
                         <form onSubmit={this.handleZipSubmit} className="form-inline">
                             <div className="form-group">
-                                <label htmlFor="zipCodeSearch">Zip Code: </label>
+                                <label htmlFor="zipCodeSearch" className="zipLabel">Zip Code: </label>
                                 <input type="text" name="zip" min="1" max="5" onChange={this.handleChange} id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
                                 <button type="submit" value="Submit" className="btn btn-primary" id="zipButton">Search</button>
                             </div>
@@ -121,7 +132,6 @@ export default class Home extends React.Component {
                 <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
                 <br />
             </div>
-        </div>
         )
     }
 }
