@@ -67,7 +67,11 @@ export default class Home extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h1 className="display-1">Spot Me</h1>
+                        <div className="bgimg-1">
+                            <div className="caption">
+                                <span className="border">Spot Me</span>
+                            <div/>
+                        </div>
                     </div>
                 </div>
                 <br />
@@ -117,6 +121,7 @@ export default class Home extends React.Component {
                 <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
                 <br />
             </div>
+        </div>
         )
     }
 }

@@ -5,8 +5,26 @@ body, html {
     color: #777;
 }
 
-/* .navbar {
-    margin-bottom: -60px;
-    background-color: rgba(200,200,200,0.5);
-  
-    } */
+.navbar {
+    background-color: rgba(200,200,200,0.5);  
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.bgimg-1 {
+background-image: url("./background.jpg");
+min-height: 100%;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}

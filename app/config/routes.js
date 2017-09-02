@@ -1,6 +1,7 @@
 var React = require("react");
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import "../style.css";
+import icon from "../background.jpg";
 
 
 // require Main.js
