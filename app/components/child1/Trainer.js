@@ -4,9 +4,6 @@ export default class Trainer extends React.Component {
     constructor(props){
         super(props)
 
-        this.state = {
-            email: ''
-        }
 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -19,25 +16,22 @@ export default class Trainer extends React.Component {
 
     render(){
         return (
-
-            <div>
+            <span>
                 {this.props.trainers.map((trainer)=>{
                     return(
-                        <div className="row border text-center" key={trainer._id}>
-                            <a  href="/#/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
+                            <a className="d-inline-block list-group-item-light border text-left align-top" key={trainer._id}  href="/#/home/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
                                 <div className="col-md-3" >
-                                    <div>
-                                        <span >Trainer: </span><span>{trainer.email} </span>
+                                    <div className="d-flex flex-row">
+                                        <span className="p-2">Trainer: </span><span className="p-2">{trainer.email} </span>
                                     </div>
-                                    <div>
-                                        <span>Specialization: </span><span>{trainer.specialization} </span>
+                                    <div className="d-flex flex-row">
+                                        <span className="p-2">Specialization: </span><span className="p-2">{trainer.specialization} </span>
                                     </div>
                                 </div>
                             </a>
-                        </div>
                     )
                 })}
-            </div>
+            </span>
         )
     }
 }
