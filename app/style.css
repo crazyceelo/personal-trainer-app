@@ -35,3 +35,8 @@ body, html {
   .zipLabel{
     color: #fff;
   }
+
+  .border{
+      margin: 1px;
+  }
+

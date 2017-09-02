@@ -59,7 +59,7 @@ export default class Home extends React.Component {
     
     render(){
         return (
-            <div className="container test">
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <br />
@@ -126,10 +126,10 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-
-                <Route path="/home/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
-
-                <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
+                <div className="row border text-center" >
+                    <Route path="/home/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
+                </div>
+                <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>} />
                 <br />
             </div>
         )
