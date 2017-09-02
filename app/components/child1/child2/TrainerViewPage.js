@@ -12,7 +12,7 @@ export default class TrainerViewPage extends Component {
 
     render() {
         return (
-            <div className="container border trainerView list-group-item-light">
+            <div className="container border trainerView list-group-item-secondary">
                 <div className="row">
                     <div className="col-md-12">
                         <br />
