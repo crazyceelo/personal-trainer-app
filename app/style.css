@@ -1,3 +1,42 @@
-p {
-    color: red;
-}
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+    background-image: url("./background.jpg");
+    min-height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .navbar {
+    opacity: 0.45;
+    background-color: rgba(200,200,200,0.5);
+  }
+
+  .display-1{
+    color: #fff;
+    padding: 18px;
+    font-size: 75px;
+    letter-spacing: 30px;
+  }
+
+  .pitch{
+    color: #fff;
+  }
+
+  .instructions{
+    color: #fff;
+  }
+
+  .zipLabel{
+    color: #fff;
+  }
+
+  .border{
+      margin: 1px;
+  }
+

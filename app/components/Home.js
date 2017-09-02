@@ -4,6 +4,7 @@ import helper from "../components/utils/helpers";
 import Navbar from "../components/Navbar";
 import Trainer from "./child1/Trainer";
 import TrainerViewPage from "./child1/child2/TrainerViewPage";
+import TrainerEditPage from "../components/TrainerEditPage";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -42,7 +43,7 @@ export default class Home extends React.Component {
                 this.setState({
                     results: data
                 });
-                location.href="#/trainers"
+                location.href="#/home/trainers"
             })
         }
         else{
@@ -62,18 +63,33 @@ export default class Home extends React.Component {
                 <div className="row">
                     <div className="col-md-12">
                         <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h1 className="display-1">Spot Me</h1>
+                        <div className="caption">
+                            <span className="display-1">Spot Me</span>
+                        </div>
                     </div>
                 </div>
                 <br />
                 <br />
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <p>
+                        <p className="pitch">
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
                             asdfa sdf as fasdf asdfasdfasdfa sdfasdf asdfasd fasdf as
@@ -90,7 +106,7 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <div className="row">
-                    <div className="col-md-12 text-center">
+                    <div className="col-md-12 text-center instructions">
                         <p>
                             <strong>Search and book any personal trainer your area</strong>
                         </p>
@@ -100,7 +116,7 @@ export default class Home extends React.Component {
                     <div className="col-md-4">
                         <form onSubmit={this.handleZipSubmit} className="form-inline">
                             <div className="form-group">
-                                <label htmlFor="zipCodeSearch">Zip Code: </label>
+                                <label htmlFor="zipCodeSearch" className="zipLabel">Zip Code: </label>
                                 <input type="text" name="zip" min="1" max="5" onChange={this.handleChange} id="zipCodeSearch" className="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
                                 <button type="submit" value="Submit" className="btn btn-primary" id="zipButton">Search</button>
                             </div>
@@ -110,10 +126,10 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-
-                <Route path="/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
-
-                <Route path="/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>}/>
+                <div className="row border text-center" >
+                    <Route path="/home/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
+                </div>
+                <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>} />
                 <br />
             </div>
         )

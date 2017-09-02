@@ -12,7 +12,7 @@ export default class TrainerViewPage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container border trainerView list-group-item-light">
                 <div className="row">
                     <div className="col-md-12">
                         <br />
@@ -26,7 +26,7 @@ export default class TrainerViewPage extends Component {
                     <dd className="col-sm-9">{this.props.trainer.specialization}</dd>
               
                     <dt className="col-sm-2">Email: </dt>
-                    <dd className="col-sm-9">asdfasdf</dd>
+                    <dd className="col-sm-9">{this.props.trainer.email}</dd>
                 </dl>
                 <dl className="row">
                     <div>
@@ -36,7 +36,7 @@ export default class TrainerViewPage extends Component {
                 <dl className="row">
                     <div>
                         <dd className="col-sm-12"> 
-                        asdfasdf
+                        {this.props.trainer.description}
                         </dd>
                     </div>
                 </dl>

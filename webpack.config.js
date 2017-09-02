@@ -19,11 +19,19 @@ module.exports = {
                     presets: ["react", "es2015"]
                 }
             },
+
             {
                 test: /\.css$/,
                 use: [
                     "style-loader",
-                    "css-loader",
+                    "css-loader"
+                ]
+            },
+
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
                 ]
             }
         ]
