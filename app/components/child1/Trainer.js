@@ -22,7 +22,7 @@ export default class Trainer extends React.Component {
                     return(
                         <a className="d-inline-block list-group-item-light border text-left align-top trainerInfo" key={trainer._id}  href="/#/home/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
                             <div className="col-md-11" >
-                                <img src={profilePic} alt="image here" />
+                                <img className="border" src={profilePic} alt="image here" />
                                 <div className="d-flex flex-row">
                                     <span className="p-2">Trainer: </span><span className="p-2">{trainer.email} </span>
                                 </div>

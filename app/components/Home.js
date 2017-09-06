@@ -81,7 +81,7 @@ export default class Home extends React.Component {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <div className="caption">
-                            <span className="display-1">Spot Me</span>
+                            <span className="display-1 title">Spot Me</span>
                         </div>
                     </div>
                 </div>
