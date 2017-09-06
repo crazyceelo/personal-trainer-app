@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 // MongoDB configuration
 // mongoose.connect("mongodb://localhost/personal-trainer-app");
-mongoose.createConnect("mongodb://localhost/personal-trainer-app", "mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c", options);
+mongoose.createConnection("mongodb://localhost/personal-trainer-app", "mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c", options);
 
 
 var db = mongoose.connection;
