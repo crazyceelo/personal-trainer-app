@@ -32,6 +32,8 @@ mongoose.connect(uriString, function(err, res){
     }
 });
 
+mongoose.connect("mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vwl6sx5c");
+
 var db = mongoose.connection;
 
 db.on("error", function(error){
