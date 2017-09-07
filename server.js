@@ -17,9 +17,13 @@ app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 app.use(express.static("public"));
 
 // MongoDB configuration
-mongoose.connect("mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
-// mongoose.connect("mongodb://localhost/personal-trainer-app, mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
-// var db = mongoose.createConnection("mongodb://localhost/personal-trainer-app, mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
+// mongoose.connect("mongodb://localhost/personal-trainer-app");
+var uriString = 
+process.env.MONGOLAB_URI || 
+process.env.MONGOHQ_URL ||
+"mongodb://localhost/personal-trainer-app";
+
+mongoose.connect(uriString);
 
 var db = mongoose.connection;
 
