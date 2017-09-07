@@ -21,7 +21,7 @@ app.use(express.static("public"));
 var uriString = 
 process.env.MONGOLAB_URI || 
 process.env.MONGOHQ_URL ||
-"mongodb://localhost/personal-trainer-app";
+"mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vwl6sx5c";
 
 mongoose.connect(uriString, function(err, res){
     if (err){
@@ -32,7 +32,6 @@ mongoose.connect(uriString, function(err, res){
     }
 });
 
-mongoose.connect("mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vwl6sx5c");
 
 var db = mongoose.connection;
 
