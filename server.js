@@ -17,11 +17,11 @@ app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 app.use(express.static("public"));
 
 // MongoDB configuration
-// mongoose.connect("mongodb://localhost/personal-trainer-app");
+mongoose.connect("mongodb://localhost/personal-trainer-app");
 // mongoose.connect("mongodb://localhost/personal-trainer-app, mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
-var db = mongoose.createConnection("mongodb://localhost/personal-trainer-app, mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
+// var db = mongoose.createConnection("mongodb://localhost/personal-trainer-app, mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vlab.com:21674/heroku_vwl6sx5c");
 
-//var db = mongoose.connection;
+var db = mongoose.connection;
 
 db.on("error", function(error){
     console.log("Mongoose Error: ", error);
