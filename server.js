@@ -23,7 +23,14 @@ process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 "mongodb://localhost/personal-trainer-app";
 
-mongoose.connect(uriString);
+mongoose.connect(uriString, function(err, res){
+    if (err){
+        console.log("error connecting to: " + uriString+". "+ err);
+    }
+    else{
+        console.log("succeeded connected to: " +uriString);
+    }
+});
 
 var db = mongoose.connection;
 
