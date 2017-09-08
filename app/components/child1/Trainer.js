@@ -20,7 +20,7 @@ export default class Trainer extends React.Component {
             <span className="align-content-left">
                 {this.props.trainers.map((trainer)=>{
                     return(
-                        <a className="d-inline-block list-group-item-light border text-left align-top trainerInfo" key={trainer._id}  href="/#/home/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
+                        <a className="d-inline-block list-group-item-light border text-left align-top trainerInfo rounded" key={trainer._id}  href="/#/home/trainers/details" onClick={()=>{this.props.selected(trainer)}}>
                             <div className="col-md-11" >
                                 <img className="border" src={profilePic} alt="image here" />
                                 <div className="d-flex flex-row">

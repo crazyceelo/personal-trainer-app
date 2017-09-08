@@ -126,7 +126,7 @@ export default class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div className="row border text-center" >
+                <div className="row border text-center rounded" >
                     <Route path="/home/trainers" render={()=><Trainer trainers={this.state.results} selected={this.updateSelected} />} />
                 </div>
                 <Route path="/home/trainers/details" render={()=><TrainerViewPage trainer={this.state.selected}/>} />
