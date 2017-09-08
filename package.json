@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "personal-trainer-app",
   "main": "server.js",
+  "engines": {
+    "node": "6.9.4"
+  },
   "scripts": {
     "test": "personal-trainer-app",
     "watch": "webpack --watch",
