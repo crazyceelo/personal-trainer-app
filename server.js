@@ -21,6 +21,7 @@ app.use(express.static("public"));
 var uriString = 
 process.env.MONGOLAB_URI || 
 process.env.MONGOHQ_URL ||
+"mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vwl6sx5c" ||
 "mongodb://localhost/personal-trainer-app";
 
 mongoose.connect(uriString, function(err, res){
@@ -39,7 +40,7 @@ db.on("error", function(error){
     console.log("Mongoose Error: ", error);
 });
 
-db.once("open", function(){
+db.once("openUri", function(){
     console.log("Mongoose connection successful.");
 })
 
