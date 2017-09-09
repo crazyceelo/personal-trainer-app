@@ -44,10 +44,10 @@ body, html {
       color: #fff;
   }
 
-  .list-group-item-light {
+  /* .list-group-item-light {
       width: 270px;
       height: 340px;
-  }
+  } */
 
   .col-form-label {
     color: #fff;

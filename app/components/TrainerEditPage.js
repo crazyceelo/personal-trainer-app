@@ -65,7 +65,7 @@ export default class TrainerEditPage extends Component {
                         <br />
                         <br />
                         <br />
-                        <br />
+                        <h1 className="stuff">Become a trainer</h1>
                         <br />
                         <br />
                     </div>
