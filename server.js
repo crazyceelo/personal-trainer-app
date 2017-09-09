@@ -5,6 +5,7 @@ var mongoose = require("mongoose");
 var routes = require("./config/api-routes");
 var http = require ('http');
 var cookieParser = require("cookie-parser");
+var loggedIn = require("./config/api-memberLoggedIn");
 
 // Server configuration
 var app = express();
@@ -48,6 +49,7 @@ db.once("open", function(){
     console.log("Mongoose connection successful.");
 })
 
+loggedIn(app);
 routes(app);
 
 app.listen(PORT, function(){
