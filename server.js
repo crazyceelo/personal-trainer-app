@@ -4,6 +4,8 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var routes = require("./config/api-routes");
 var http = require ('http');
+var cookieParser = require("cookie-parser");
+var loggedIn = require("./config/api-memberLoggedIn");
 
 // Server configuration
 var app = express();
@@ -12,6 +14,7 @@ var PORT = process.env.PORT || 3000;
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
+app.use(cookieParser());
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
@@ -24,7 +27,7 @@ var uriString =
 process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 "mongodb://heroku_vwl6sx5c:ee8db3m3o8nbgjnkftgienn1ui@ds121674.mlab.com:21674/heroku_vwl6sx5c" ||
-"mongodb://localhost/personal-trainer-app";
+// "mongodb://localhost/personal-trainer-app";
 
 mongoose.connect(uriString, function(err, res){
     if (err){
@@ -46,6 +49,7 @@ db.once("open", function(){
     console.log("Mongoose connection successful.");
 })
 
+loggedIn(app);
 routes(app);
 
 app.listen(PORT, function(){
