@@ -76,7 +76,7 @@ export default class Home extends React.Component {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <div className="caption">
-                            <span className="display-1 title">Spot Me</span>
+                            <span className="display-1 title">SPOT ME</span>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default class Home extends React.Component {
                 <br />
                 <div className="row pitchBox text-center justify-content-center">
                     <div className="col-md-5 text-center">
-                        <div class="">
+                        <div className="">
                             <strong>Find a trainer that fits your style of fitness</strong>
                         </div>
                     </div>
