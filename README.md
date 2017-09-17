@@ -7,4 +7,16 @@ Team:
 Carlos Perez
 
 Feature List:
-- list
+- Simple form interface for personal trainers to enter their information.
+- Ability to search by zip code and find local trainers.
+- Simple interface to immediately start browsing for trainers in any zip code.
+
+Technologies:
+- React
+- MongoDB
+- Node.js
+- Express
+- HTML
+- CSS
+- Bootstrap
+- Javascript
